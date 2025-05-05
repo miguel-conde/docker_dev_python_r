@@ -1,0 +1,17 @@
+{
+"name": "Python Dev",
+  "image": "mi-entorno-dev:latest",  // tu imagen personalizada
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=/home/tu_usuario/tu_proyecto,target=/workspace,type=bind"
+  ],
+  "remoteUser": "root",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ]
+}
+
