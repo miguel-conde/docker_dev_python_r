@@ -20,11 +20,6 @@ RUN apt-get update && apt-get install -y \
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get update && apt-get install -y nodejs && \
     npm install -g npm
-        
-# --- Instalar Docker Compose (última versión estable)
-RUN curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
-    chmod +x /usr/local/bin/docker-compose && \
-    ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # --- pipx + pipenv + poetry
 RUN apt-get update && apt-get install -y pipx && \
